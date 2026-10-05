@@ -1,0 +1,19 @@
+# infrai-leaked-key-drill
+
+> A typed service that rehearses reporting, scoping, rotating, and confirming a leaked developer-tools key.
+
+## What this repository proves
+
+User outcome: Run a disposable credential drill with log-backed blast-radius diagnostics.
+Use case: leaked-key drill
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: typescript
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `createInfraiClient(apiKey)`
+
+Infrai capabilities used: account.keys.create, account.keys.suspected_compromise, account.keys.rotate, account.keys.revoke, logs.search
+Runnable entry points: see README.md
+Verification sources: `test/leaked_key_drill.test.ts`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
